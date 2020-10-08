@@ -1,0 +1,61 @@
+{
+    "id": 2,
+    "name": "sam",
+    "version": "1.0",
+    "title": "Spectral Angle Mapper",
+    "description": "The algorithm determines the spectral similarity between two spectra by calculating the angle between the spectra. This technique, developed by J.W. Boardman, determines the spectral similarity between given reference spectra, r, (i.e., the image endmember in this case) and the spectra found at each pixel, t (Kruse, et al., 1992). The result of the comparison is reported as the angular difference (in radians) between the two spectra. Each pair of spectra is treated as a vector in nb-space, allowing the similarity of the spectra to be determined without regard to their relative brightness values. The result of the SAM calculation is an image for each reference spectrum, with high values (displayed in brighter values) corresponding to a better match between reference and test spectra.",
+    "icon_code": "f0e7",
+    "is_published": false,
+    "is_active": true,
+    "is_paused": false,
+    "is_system": false,
+    "max_scheduled": 1,
+    "revision_num": 1,
+    "docker_image": "10.4.4.10:5000/sam:1.0",
+    "unmet_resources": null,
+    "manifest": {
+        "job": {
+            "name": "sam",
+            "jobVersion": "1.0",
+            "packageVersion": "",
+            "title": "Spectral Angle Mapper",
+            "description": "The algorithm determines the spectral similarity between two spectra by calculating the angle between the spectra. This technique, developed by J.W. Boardman, determines the spectral similarity between given reference spectra, r, (i.e., the image endmember in this case) and the spectra found at each pixel, t (Kruse, et al., 1992). The result of the comparison is reported as the angular difference (in radians) between the two spectra. Each pair of spectra is treated as a vector in nb-space, allowing the similarity of the spectra to be determined without regard to their relative brightness values. The result of the SAM calculation is an image for each reference spectrum, with high values (displayed in brighter values) corresponding to a better match between reference and test spectra.",
+            "maintainer": {
+                "name": "Boardman",
+                "email": ""
+            },
+            "timeout": 30,
+            "interface": {
+                "command": "./sam.sh",
+                "inputs": {
+                    "files": [{
+                        "mediaTypes": ["image/nitf"],
+                        "required": true,
+                        "type": "file",
+                        "name": "image"
+                    },{
+                        "mediaTypes": ["text/csv"],
+                        "required": true,
+                        "type": "file",
+                        "name": "signature"
+                    }]
+                },
+                "outputs": {
+                    "files": [{
+                        "mediaType": "image/tiff",
+                        "required": true,
+                        "type": "file",
+                        "name": "sam-detections"
+                    }]
+                },
+                "settings": []
+            }
+        },
+        "seedVersion": "1.0"
+    },
+    "configuration": {},
+    "created": "2015-09-13T11:15:32.645Z",
+    "deprecated": null,
+    "paused": null,
+    "last_modified": "2015-09-13T11:15:32.645Z"
+}

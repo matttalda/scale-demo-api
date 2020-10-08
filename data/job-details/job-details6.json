@@ -1,0 +1,120 @@
+{
+    "id": 6,
+    "job_type": {
+        "id": 6,
+        "name": "wv2-atmosphere-corr",
+        "version": "1.0.1",
+        "title": "WorldView-2 Atmospheric Correction",
+        "description": "Applies Atmospheric Correction to WorldView-2 GeoTiffs",
+        "revision_num": 1,
+        "icon_code": "f0c2"
+    },
+    "job_type_rev": {
+        "id": 5,
+        "job_type": {
+            "id": 3
+        },
+        "revision_num": 1,
+        "interface": {
+            "input_data": [{
+                "media_types": ["image/nitf"],
+                "required": true,
+                "type": "image",
+                "name": "infile"
+            }],
+            "output_data": [{
+                "media_type": "image/tiff",
+                "required": true,
+                "type": "image",
+                "name": "wv2-corrected"
+            }],
+            "version": "1.0",
+            "command": "./cem.sh",
+            "command_arguments": "${input_file} ${job_output_dir}"
+        },
+        "created": "2016-05-15T00:00:00Z"
+    },
+    "event": {
+        "id": 10278,
+        "type": "PARSE",
+        "rule": {
+            "id": 8,
+            "type": "PARSE",
+            "is_active": true,
+            "created": "2016-05-15T18:31:29.282Z",
+            "archived": null,
+            "last_modified": "2016-05-15T18:31:29.282Z"
+        },
+        "occurred": "2016-05-15T17:27:31.467Z"
+    },
+    "error": null,
+    "status": "COMPLETED",
+    "priority": 210,
+    "num_exes": 1,
+    "timeout": 1800,
+    "max_tries": 3,
+    "cpus_required": 4.0,
+    "mem_required": 2048.0,
+    "disk_out_const_required": 2048.0,
+    "disk_out_mult_required": 0.0,
+    "created": "2016-05-15T17:55:41.005Z",
+    "queued": "2016-05-15T17:56:41.005Z",
+    "started": "2016-05-15T17:57:41.005Z",
+    "ended": "2016-05-15T17:58:41.005Z",
+    "last_status_change": "2016-05-15T17:58:45.906Z",
+    "last_modified": "2016-05-15T17:58:46.001Z",
+    "input": {
+        "input_data": [
+            {
+                "name": "input_file",
+                "file_id": 8480
+            }
+        ],
+        "version": "1.0",
+        "output_data": [
+            {
+                "name": "output_file",
+                "workspace_id": 2
+            }
+        ]
+    },
+    "output": {
+        "output_data": [
+            {
+                "name": "output_file",
+                "file_id": 8484
+            }
+        ],
+        "version": "1.0"
+    },
+    "execution": {
+        "id": 14552,
+        "status": "COMPLETED",
+        "command_arguments": "${input_file} ${job_output_dir}",
+        "timeout": 1800,
+        "pre_started": "2015-09-01T17:27:32.435Z",
+        "pre_completed": "2015-09-01T17:27:34.346Z",
+        "pre_exit_code": null,
+        "job_started": "2015-09-01T17:27:42.437Z",
+        "job_completed": "2015-09-01T17:27:46.762Z",
+        "job_exit_code": null,
+        "post_started": "2015-09-01T17:27:47.246Z",
+        "post_completed": "2015-09-01T17:27:49.461Z",
+        "post_exit_code": null,
+        "created": "2015-09-01T17:27:31.753Z",
+        "queued": "2015-09-01T17:27:31.716Z",
+        "started": "2015-09-01T17:27:32.022Z",
+        "ended": "2015-09-01T17:27:49.461Z",
+        "last_modified": "2015-09-01T17:27:49.606Z",
+        "job": {
+            "id": 15586
+        },
+        "node": {
+            "id": 1
+        },
+        "error": null
+    },
+    "configuration": {
+        "priority": 34
+    }
+}

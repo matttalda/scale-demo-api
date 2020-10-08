@@ -1,0 +1,59 @@
+{
+    "id": 7,
+    "name": "landsat8-atmos-corr",
+    "version": "2.1.9",
+    "title": "Landsat 8 Atmospheric Correction",
+    "description": "Applies Atmospheric Correction to Landsat 8 GeoTiffs",
+    "icon_code": "f00c",
+    "is_published": false,
+    "is_active": true,
+    "is_paused": false,
+    "is_system": false,
+    "max_scheduled": 1,
+    "revision_num": 1,
+    "docker_image": "10.4.4.10:5000/ls8-atmos-corr:2.1.9",
+    "unmet_resources": null,
+    "manifest": {
+        "job": {
+            "name": "landsat8-atmos-corr",
+            "jobVersion": "2.1.9",
+            "packageVersion": "",
+            "title": "Landsat 8 Atmospheric Correction",
+            "description": "Applies Atmospheric Correction to Landsat 8 GeoTiffs",
+            "maintainer": {
+                "name": "USGS",
+                "email": ""
+            },
+            "timeout": 0,
+            "interface": {
+                "command": "./correct_ls8.sh",
+                "inputs": {
+                    "files": [
+                        {
+                            "name": "infile",
+                            "required": true,
+                            "mediaTypes": ["image/tiff"]
+                        }
+                    ]
+                },
+                "outputs": {
+                    "files": [
+                        {
+                            "name": "ls8-atmos-corrected",
+                            "required": true,
+                            "mediaType": "image/nitf"
+
+                        }
+                    ]
+                },
+                "settings": []
+            }
+        },
+        "seedVersion": "1.0"
+    },
+    "configuration": {},
+    "created": "2015-11-01T06:44:19.537Z",
+    "deprecated": null,
+    "paused": null,
+    "last_modified": "2015-11-01T06:44:19.537Z"
+}

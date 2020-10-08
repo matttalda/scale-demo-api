@@ -1,0 +1,42 @@
+{
+    "id": 6,
+    "name": "wv2-atmosphere-corr",
+    "version": "1.0.1",
+    "title": "WorldView-2 Atmospheric Correction",
+    "description": "Applies Atmospheric Correction to WorldView-2 GeoTiffs",
+    "icon_code": "f14e",
+    "is_published": false,
+    "is_active": true,
+    "is_paused": false,
+    "is_system": false,
+    "max_scheduled": 1,
+    "revision_num": 1,
+    "docker_image": "10.4.4.10:5000/wv2-parse:1.0.1",
+    "unmet_resources": null,
+    "manifest": {
+        "job": {
+            "name": "wv2-atmosphere-corr",
+            "jobVersion": "1.0.1",
+            "packageVersion": "",
+            "title": "WorldView-2 Atmospheric Correction",
+            "description": "Applies Atmospheric Correction to WorldView-2 GeoTiffs",
+            "maintainer": {
+                "name": "DigitalGlobe",
+                "email": ""
+            },
+            "timeout": 0,
+            "interface": {
+                "command": "./correct_wv2.sh",
+                "inputs": {},
+                "outputs": {},
+                "settings": []
+            }
+        },
+        "seedVersion": "1.0"
+    },
+    "configuration": {},
+    "created": "2015-03-31T07:54:09.492Z",
+    "deprecated": null,
+    "paused": null,
+    "last_modified": "2015-03-31T07:54:09.492Z"
+}

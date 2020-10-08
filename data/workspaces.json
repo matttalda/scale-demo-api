@@ -1,0 +1,29 @@
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "name": "rs",
+            "title": "Raw Source",
+            "description": "Raw Source Workspace",
+            "base_url": "http://host.com/rs",
+            "is_active": true,
+            "created": "2015-10-05T21:26:04.855Z",
+            "deprecated": null,
+            "last_modified": "2015-10-05T21:26:04.855Z"
+        },
+        {
+            "id": 2,
+            "name": "products",
+            "title": "Products",
+            "description": "Products Workspace",
+            "base_url": "http://host.com/products",
+            "is_active": true,
+            "created": "2015-10-05T21:26:04.876Z",
+            "deprecated": null,
+            "last_modified": "2015-10-05T21:26:04.876Z"
+        }
+    ]
+}

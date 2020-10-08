@@ -1,0 +1,42 @@
+{
+    "id": 9,
+    "name": "wv2-ortho",
+    "version": "2.0",
+    "title": "WorldView-2 Rigorous Orthorectification",
+    "description": "Applies Orthorectification to WorldView-2 data",
+    "icon_code": "f219",
+    "is_published": false,
+    "is_active": true,
+    "is_paused": false,
+    "is_system": false,
+    "max_scheduled": 1,
+    "revision_num": 1,
+    "docker_image": "10.4.4.10:5000/wv2-ortho:2.0",
+    "unmet_resources": null,
+    "manifest": {
+        "job": {
+            "name": "wv2-ortho",
+            "jobVersion": "2.0",
+            "packageVersion": "",
+            "title": "WorldView-2 Rigorous Orthorectification",
+            "description": "Applies Orthorectification to WorldView-2 data",
+            "maintainer": {
+                "name": "DigitalGlobe",
+                "email": ""
+            },
+            "timeout": 0,
+            "interface": {
+                "command": "./wv2_ortho.py",
+                "inputs": {},
+                "outputs": {},
+                "settings": []
+            }
+        },
+        "seedVersion": "1.0"
+    },
+    "configuration": {},
+    "created": "2015-12-19T13:02:46.551Z",
+    "deprecated": null,
+    "paused": null,
+    "last_modified": "2015-12-19T13:02:46.551Z"
+}

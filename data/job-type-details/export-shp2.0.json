@@ -1,0 +1,57 @@
+{
+    "id": 10,
+    "name": "export-shp",
+    "version": "2.0",
+    "title": "Export Shapefile",
+    "description": "Creates shapefile (.shp) from raster data",
+    "icon_code": "f06e",
+    "is_published": true,
+    "is_active": true,
+    "is_paused": false,
+    "is_system": false,
+    "max_scheduled": 1,
+    "revision_num": 1,
+    "docker_image": "10.4.4.10:5000/export-shp:2.0",
+    "unmet_resources": null,
+    "manifest": {
+        "job": {
+            "name": "export-shp",
+            "jobVersion": "2.0",
+            "packageVersion": "",
+            "title": "Export Shapefile",
+            "description": "Creates shapefile (.shp) from raster data",
+            "maintainer": {
+                "name": "USGS",
+                "email": ""
+            },
+            "timeout": 0,
+            "interface": {
+                "command": "./export_shapefile.sh",
+                "inputs": {
+                    "files": [{
+                        "mediaTypes": [],
+                        "required": true,
+                        "type": "file",
+                        "name": "infile"
+                    }]
+                },
+                "outputs": {
+                    "files": [{
+                        "mediaType": "application/xml",
+                        "required": true,
+                        "type": "file",
+                        "name": "shapefile"
+                    }]
+                },
+                "mounts": [],
+                "settings": []
+            }
+        },
+        "seedVersion": "1.0"
+    },
+    "configuration": {},
+    "created": "2015-08-02T09:23:33.254Z",
+    "deprecated": null,
+    "paused": null,
+    "last_modified": "2015-08-02T09:23:33.254Z"
+}

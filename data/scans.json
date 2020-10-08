@@ -1,0 +1,71 @@
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "name": "scan1",
+            "title": "Scan 1",
+            "description": "First scan",
+            "file_count": 5,
+            "job": {
+                "id": 7,
+                "job_type": {
+                    "id": 2,
+                    "name": "scale-scan",
+                    "version": "1.0.0",
+                    "title": "Scale Scan",
+                    "description": "Scans a workspace for existing source files to ingest",
+                    "revision_num": 1,
+                    "icon_code": "f0e7"
+                },
+                "job_type_rev": {
+                    "id": 2
+                },
+                "status": "RUNNING"
+            },
+            "dry_run_job": {},
+            "created": "2015-10-05T21:26:04.876Z",
+            "last_modified": "2015-10-05T21:26:04.876Z"
+        },
+        {
+            "id": 2,
+            "name": "scan2",
+            "title": "Scan 2",
+            "description": "Second scan",
+            "file_count": 17,
+            "job": {
+                "id": 7,
+                "job_type": {
+                    "id": 2,
+                    "name": "scale-scan",
+                    "version": "1.0.0",
+                    "title": "Scale Scan",
+                    "description": "Scans a workspace for existing source files to ingest",
+                    "revision_num": 1,
+                    "icon_code": "f0e7"
+                },
+                "job_type_rev": {
+                    "id": 2
+                },
+                "status": "RUNNING"
+            },
+            "dry_run_job": {
+                "id": 6,
+                "job_type": {
+                    "id": 2,
+                    "name": "scale-scan",
+                    "version": "1.0.0",
+                    "title": "Scale scan",
+                    "description": "Scans a workspace for existing source files to ingest",
+                    "revision_num": 1,
+                    "icon_code": "f0e7"
+                },
+                "status": "RUNNING"
+            },
+            "created": "2015-10-05T21:26:04.855Z",
+            "last_modified": "2015-10-05T21:26:04.855Z"
+        }
+    ]
+}
