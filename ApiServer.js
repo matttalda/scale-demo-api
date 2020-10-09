@@ -5,7 +5,7 @@ const router = require('./router');
 
 
 const server = new Hapi.Server({
-    port: 8081,
+    port: 8080,
     host: env.IP || '0.0.0.0'
 });
 
