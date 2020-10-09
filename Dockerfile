@@ -8,7 +8,7 @@ COPY . /usr/src/scale-ui-api
 RUN npm install
 
 # Our app will run on port 9000
-EXPOSE 8081
+EXPOSE 8080
 
 # Start a hapi server on port 9000
 CMD [ "npm", "start" ]
