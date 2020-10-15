@@ -7,7 +7,10 @@ const init = async() => {
         port: process.env.Port || 8080,
         host: process.env.IP || '0.0.0.0',
         routes: {
-            cors: true
+            cors: {
+                origin: ['*'],
+                credentials: true
+            },
         }
     });
 
