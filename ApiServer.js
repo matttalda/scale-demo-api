@@ -5,7 +5,7 @@ const init = async() => {
 
     const server = new Hapi.Server({
         port: process.env.Port || 8080,
-        host: process.env.IP || 'localhost'
+        host: process.env.IP || '0.0.0.0'
     });
 
     router.init(server);
