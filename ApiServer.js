@@ -4,8 +4,8 @@ const router = require('./router');
 const init = async() => {
 
     const server = new Hapi.Server({
-        port: process.env.Port,
-        host: process.env.IP
+        port: process.env.Port || 8080,
+        host: process.env.IP || 'localhost'
     });
 
     router.init(server);
