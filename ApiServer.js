@@ -1,19 +1,18 @@
 const Hapi = require('@hapi/hapi');
+const router = require('./router');
 const env = process.env;
 
-const router = require('./router');
+const init = async() => {
 
+    const server = new Hapi.Server({
+        port: env.Port || 8080,
+        host: env.IP || 'localhost'
+    });
 
-const server = new Hapi.Server({
-    port: 8080,
-    host: env.IP || '0.0.0.0'
-});
+    router.init(server);
 
-router.init(server);
-
-server.start(function (err) {
-    if (err) {
-        throw err;
-    }
+    await server.start();
     console.log('Server running at: ' + server.info.uri);
-});
+}
+
+init();
